@@ -25,6 +25,7 @@ public class StarDisplay : MonoBehaviour
         return stars >= amount;
     }
 
+    //Called by the animation event under the Trophy in Unity
     public void AddStars(int amount)
     {
         stars += amount;

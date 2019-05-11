@@ -21,7 +21,8 @@ public class AttackerSpawner : MonoBehaviour
 
     private void SpawnAttacker()
     {
-        Instantiate(attackerPrefab, transform.position, transform.rotation);
+        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, transform.rotation);
+        newAttacker.transform.parent = transform; // instantiates attackers under their spawners in Unity hierarchy
     }
 
     // Update is called once per frame
