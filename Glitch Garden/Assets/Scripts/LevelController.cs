@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    [SerializeField] GameObject winLabel; // drag the Level Complete Canvas from the Hierarchy into empty field in Inspector
+    [SerializeField] float timeToWait = 5f;
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
+
+    private void Start()
+    {
+        winLabel.SetActive(false); // removed the Level Complete Canvas from the game screen at startup
+    }
 
     // called by Awake() in attacker.cs
     public void AttackerSpawned()
@@ -20,8 +27,16 @@ public class LevelController : MonoBehaviour
 
         if (numberOfAttackers <= 0 && levelTimerFinished)
         {
-            Debug.Log("End Level Now");
+            StartCoroutine(HandleWinCondition());
         }
+    }
+
+    IEnumerator HandleWinCondition()
+    {
+        winLabel.SetActive(true);
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(timeToWait);
+        GetComponent<LevelLoader>().LoadNextScene();
     }
 
     // called by if statement in Update() in GameTimer.cs
@@ -39,5 +54,5 @@ public class LevelController : MonoBehaviour
             spawner.StopSpawning();
         }
     }
-
+    
 }

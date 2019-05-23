@@ -9,3 +9,4 @@ public class BaseCollider : MonoBehaviour
         FindObjectOfType<HealthDisplay>().ReducePlayerHP();
     }
 }
+

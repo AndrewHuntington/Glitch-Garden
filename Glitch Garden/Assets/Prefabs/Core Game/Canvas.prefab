@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172b1af0ef7a63f408dde4a102d27587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 10
+  levelTime: 2
 --- !u!1 &1630593164
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34122eb654ef5e40be2df3206b95cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 5
+  playerHP: 10
 --- !u!1 &1902956348
 GameObject:
   m_ObjectHideFlags: 0
