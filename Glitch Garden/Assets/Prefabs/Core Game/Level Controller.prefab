@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad22f376d2656aa48bcca9edc35790d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winLabel: {fileID: 0}
+  youWinCanvas: {fileID: 0}
+  youLoseCanvas: {fileID: 0}
   timeToWait: 5
 --- !u!114 &8764909836196128813
 MonoBehaviour:
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432f360ca792e9345a1f54504bb3257d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 2
+  timeToWait: 3
 --- !u!82 &724543155
 AudioSource:
   m_ObjectHideFlags: 0

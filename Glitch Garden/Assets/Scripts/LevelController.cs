@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] GameObject winLabel; // drag the Level Complete Canvas from the Hierarchy into empty field in Inspector
-    [SerializeField] float timeToWait = 5f;
+    [SerializeField] GameObject youWinCanvas; // drag the You Win Canvas from the Hierarchy into empty field in Inspector
+    [SerializeField] GameObject youLoseCanvas; // drag the You Lose Canvas from the Hierarchy into empty field in Inspector
+    [SerializeField] float timeToWait = 3f;
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
 
     private void Start()
     {
-        winLabel.SetActive(false); // removed the Level Complete Canvas from the game screen at startup
+        youWinCanvas.SetActive(false); // remove the You Win Canvas from the game screen at startup
+        youLoseCanvas.SetActive(false); // remove the You Lose Canvas from the game screen at startup
     }
 
     // called by Awake() in attacker.cs
@@ -33,10 +35,16 @@ public class LevelController : MonoBehaviour
 
     IEnumerator HandleWinCondition()
     {
-        winLabel.SetActive(true);
+        youWinCanvas.SetActive(true);
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(timeToWait);
         GetComponent<LevelLoader>().LoadNextScene();
+    }
+
+    public void HandleLoseCondition()
+    {
+        youLoseCanvas.SetActive(true);
+        Time.timeScale = 0;
     }
 
     // called by if statement in Update() in GameTimer.cs
