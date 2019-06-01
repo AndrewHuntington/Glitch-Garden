@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    [SerializeField] int playerHP = 10;
+    [SerializeField] float baseHP = 3f;
+    [SerializeField] int damage = 1;
+    float playerHP;
     Text playerHPText;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        playerHP = baseHP - PlayerPrefsController.GetDifficulty();
         playerHPText = GetComponent<Text>();
         UpdateDisplay();
     }
@@ -23,12 +26,17 @@ public class HealthDisplay : MonoBehaviour
 
     public void ReducePlayerHP()
     {
-        playerHP -= 1;
+        playerHP -= damage;
         UpdateDisplay();
 
         if (playerHP <= 0)
         {
             FindObjectOfType<LevelController>().HandleLoseCondition();
         }       
+    }
+
+    public void SetHealth(float hp)
+    {
+        playerHP = hp;
     }
 }
