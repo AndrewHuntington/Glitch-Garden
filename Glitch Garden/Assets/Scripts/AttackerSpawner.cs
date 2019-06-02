@@ -33,8 +33,8 @@ public class AttackerSpawner : MonoBehaviour
 
     private void Spawn(Attacker myAttacker)
     {
-        Attacker newAttacker = Instantiate(myAttacker, transform.position, transform.rotation);
-        newAttacker.transform.parent = transform; // instantiates attackers under their spawners in Unity hierarchy
+       Attacker newAttacker = Instantiate(myAttacker, transform.position, transform.rotation);
+       newAttacker.transform.parent = transform; // instantiates attackers under their spawners in Unity hierarchy  
     }
 
 }
