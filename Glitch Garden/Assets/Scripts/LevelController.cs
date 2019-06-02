@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] float timeToWait = 3f;
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
+    bool levelFinishActive = false;
 
     private void Start()
     {
@@ -35,14 +36,19 @@ public class LevelController : MonoBehaviour
 
     IEnumerator HandleWinCondition()
     {
-        youWinCanvas.SetActive(true);
-        GetComponent<AudioSource>().Play();
-        yield return new WaitForSeconds(timeToWait);
-        GetComponent<LevelLoader>().LoadNextScene();
+        if (levelFinishActive == false)
+        {
+            youWinCanvas.SetActive(true);
+            GetComponent<AudioSource>().Play();
+            yield return new WaitForSeconds(timeToWait);
+            GetComponent<LevelLoader>().LoadNextScene();
+            
+        }
     }
 
     public void HandleLoseCondition()
     {
+        levelFinishActive = true;
         youLoseCanvas.SetActive(true);
         Time.timeScale = 0;
     }

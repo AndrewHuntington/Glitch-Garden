@@ -356,22 +356,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
-      propertyPath: attackerPrefabArray.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
       propertyPath: minSpawnDelay
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
       propertyPath: maxSpawnDelay
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
-      propertyPath: attackerPrefabArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 929177409280085472, guid: 903f56c813636144badd1686979c14a1,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
 --- !u!1 &1038744869
@@ -541,22 +532,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
-      propertyPath: attackerPrefabArray.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
       propertyPath: minSpawnDelay
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
       propertyPath: maxSpawnDelay
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1067809555, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
-      propertyPath: attackerPrefabArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 929177409280085472, guid: 903f56c813636144badd1686979c14a1,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70cf31f32a223b0468920fc1b283e8b6, type: 3}
 --- !u!1001 &1290296519
@@ -570,16 +552,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Buttons
-      objectReference: {fileID: 0}
-    - target: {fileID: 185300070962698336, guid: d249a47c3a8354b4da6c62e0c184091c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 185300071832614383, guid: d249a47c3a8354b4da6c62e0c184091c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1323152532323353015, guid: d249a47c3a8354b4da6c62e0c184091c,
         type: 3}
@@ -686,14 +658,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2676700, guid: d249a47c3a8354b4da6c62e0c184091c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 509413898, guid: d249a47c3a8354b4da6c62e0c184091c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d249a47c3a8354b4da6c62e0c184091c, type: 3}
 --- !u!1 &1623237259
@@ -754,11 +718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (Fox Only)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898305205834498380, guid: 862c7a69faf6dc24a9c1d8c6861faf4e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4898305205834498418, guid: 862c7a69faf6dc24a9c1d8c6861faf4e,
         type: 3}
@@ -1047,13 +1006,9 @@ PrefabInstance:
       propertyPath: playerHP
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 910217381, guid: 69da8c1ce370e7649ba56652a7f6c2bd, type: 3}
-      propertyPath: stars
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 1333394738, guid: 69da8c1ce370e7649ba56652a7f6c2bd, type: 3}
       propertyPath: levelTime
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69da8c1ce370e7649ba56652a7f6c2bd, type: 3}
@@ -1137,11 +1092,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (Lizard Only)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7273516158868522229, guid: 16764afabc24ce84da5eb82140aa56ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7273516158868522187, guid: 16764afabc24ce84da5eb82140aa56ce,
         type: 3}
@@ -1615,11 +1565,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 6897309729901748089, guid: 70cf31f32a223b0468920fc1b283e8b6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6897309729901748039, guid: 70cf31f32a223b0468920fc1b283e8b6,
         type: 3}
