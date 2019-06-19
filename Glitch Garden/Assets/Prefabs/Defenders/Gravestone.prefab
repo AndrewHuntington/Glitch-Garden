@@ -186,10 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbf616519defdd4e999bb6b7ca4ca65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  health: 250
-  deathVFX: {fileID: 5374902726177402536, guid: 4b0ae5c818c5d204b9ec28d0933ff35b,
+  healthBar: {fileID: 3475291827517059384, guid: 4b0ae5c818c5d204b9ec28d0933ff35b,
     type: 3}
+  health: 250
+  deathVFX: {fileID: 0}
 --- !u!114 &6699106053859972831
 MonoBehaviour:
   m_ObjectHideFlags: 0
