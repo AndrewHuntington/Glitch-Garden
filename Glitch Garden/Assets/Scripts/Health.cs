@@ -5,12 +5,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] HealthBar healthBar;
     [SerializeField] float health = 100f;
     [SerializeField] GameObject deathVFX;
+
+    private float maxHealth;
+
+    private void Start()
+    {
+        maxHealth = health;
+    }
 
     public void DealDamage(float damage)
     {
         health -= damage;
+        float mathHP = health / maxHealth;
+        healthBar.SetSize(mathHP);
         if (health <= 0)
         {
             TriggerDeathVFX();
